@@ -8,9 +8,6 @@ int main() {
     float media=0;
 
     cin >> quant;
-    float quant2;
-
-    quant2 = quant;
 
     float num[quant];
 
