@@ -4,7 +4,7 @@
 using namespace std;
 
 int main() {
-    int quant, soma;
+    int quant, soma=0;
     float media=0;
 
     cin >> quant;
