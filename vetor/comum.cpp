@@ -31,10 +31,10 @@ int main() {
         }
     }
 
-    if(tentativas==quant1){
-        cout << "sim" << endl;
+    if(tentativas>0){
+        cout << "Existe" << endl;
     }else{
-        cout << "não" << endl;
+        cout << "Nao existe" << endl;
     }
 
     return 0;
