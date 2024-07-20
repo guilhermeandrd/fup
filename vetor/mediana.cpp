@@ -1,32 +1,40 @@
 #include <iostream>
+#include <iomanip>
 
 using namespace std;
 
 int main() {
-    int quant, i=0, mediana=0, passo=0;
+    int quant, i=0, passo=0, meio=0;
+    double mediana=0;
 
     cin >> quant;
 
-    int vetor[quant];
+    double vetor[quant];
 
     for(i=0;i<quant;i++){
         cin >> vetor[i];
     }
 
-    for(i=0;i<quant;i++){
-        if(i>0){
-            if(vetor[i-1]>vetor[i]){
+    for(int e=0;e<quant;e++){
+        for(i=0;i<quant;i++){
+            if(vetor[i]>vetor[i+1]){
                 passo = vetor[i];
-                vetor[i] = vetor[i-1];
-                vetor[i-1] = passo;
+                vetor[i] = vetor[i+1];
+                vetor[i+1] = passo;
             }
-        }else if(i==(quant-1)){
-            
-        }
+         }
     }
-    for(i=0;i<quant;i++){
-        cout << vetor[i];
+
+    if((quant%2)==0){
+        meio = (quant/2)-1;
+        mediana = (vetor[meio] + vetor[meio+1])/2.0;
+    }else{
+        meio = ((quant+1)/2)-1;
+        mediana = vetor[meio]/0.0;
     }
+    
+    cout << setprecision(2) << fixed << mediana << "\n";
+
     //dois casos
         //se a quantidade de elementos for par
             //pegar os dois elementos do meio, somar e dividir por 2
