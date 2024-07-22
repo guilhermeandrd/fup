@@ -3,26 +3,39 @@
 using namespace std;
 
 int main() {
-    int quant,i, i2, soma=0;
+    int quant1, i=0, passo=0, n=0;
 
-    cin >> quant;
+    cin >> quant1;
 
-    int vetor[quant];
+    int vetor[quant1];
 
-    for(i=0;i<quant;i++){
+    for(i=0;i<quant1;i++){
         cin >> vetor[i];
     }
-
-    for(i=0;i<quant;i++){
-        for(i2=0;i2<quant;i2++){
-            if((vetor[i]*-1)==vetor[i2]){
-                soma += 1;
-                break;
+    for(int e=0;e<quant1;e++){
+        for(i=0;i<quant1;i++){
+            if(vetor[i]>vetor[i+1]){
+                passo = vetor[i];
+                vetor[i] = vetor[i+1];
+                vetor[i+1] = passo;
             }
         }
     }
 
-    cout << soma/2;
+    for(i=0;i<quant1;i++){
+        if(i!=(quant1-1)){
+            n = vetor[i];
+            if((n-vetor[i+1])==0){
+                vetor[i] = 0;
+            }
+        }
+    }
+
+    for(i=0;i<quant1;i++){
+        if(vetor[i] != 0){
+            cout << vetor[i] << " ";
+        }
+    }
 
     return 0;
 }

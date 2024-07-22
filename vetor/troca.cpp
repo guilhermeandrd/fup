@@ -3,29 +3,24 @@
 using namespace std;
 
 int main() {
-    int quant,i;
+    int quant, posi1, posi2,i,troca=0;
 
     cin >> quant;
 
-    int vetor1[quant];
-    int vetor2[quant];
+    int vetor[quant];
 
     for(i=0;i<quant;i++){
-        cin >> vetor1[i];
+        cin >> vetor[i];
     }
 
-    for(i=0;i<quant;i++){
-        cin >> vetor2[i];
-    }
+    cin >> posi1 >> posi2;
+
+    troca = vetor[posi1];
+    vetor[posi1] = vetor[posi2];
+    vetor[posi2] = troca;
 
     for(i=0;i<quant;i++){
-        cout << vetor2[i] << " ";
-    }
-
-    cout << "\n";
-
-    for(i=0;i<quant;i++){
-        cout << vetor1[i] << " ";
+        cout << vetor[i] << "\n";
     }
 
     return 0;

@@ -14,21 +14,33 @@ int main() {
     for(i=0;i<quant;i++){
         cin >> vetor[i];
         soma += vetor[i];
-        limite = vetor[i];
     }
-    
+
     media = soma/quant;
+    limite = quant-1;
 
     cout << setprecision(2) << fixed << media << endl;
 
     for(i=0;i<quant;i++){
         if(vetor[i]<media){
-            cout << "P" << " ";
+            cout << "P ";
         }else if(vetor[i]==media){
-            cout << "M" << " ";
+            if(i==limite){
+                cout << "M";
+            }else{
+             cout << "M ";    
+            }
         }else{
-            cout << "G" << " ";
+            if(i==limite){
+                cout << "G";
+            }else{
+                cout << "G ";
+            }
         }
     }
+
+
+    
+
     return 0;
 }

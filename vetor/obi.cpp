@@ -14,7 +14,7 @@ int main() {
     }
 
     for(i=0;i<quant;i++){
-        if(i!=(quant-3)){
+        if(i!=(quant-2)){
             if(vetor[i]==1){
                 if(vetor[i+1]==0){
                     if(vetor[i+2]==0){

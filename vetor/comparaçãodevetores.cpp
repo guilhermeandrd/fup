@@ -26,7 +26,6 @@ int main() {
     }else{
         for(i=0;i<quant1;i++){
             if(vetor1[i]==vetor2[i]){
-                //cout << vetor1[i] << "  " << vetor2[i] << "\n";
                 soma +=1;
             }else{
                 cout << "Diferentes" << endl;

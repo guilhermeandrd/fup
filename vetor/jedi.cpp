@@ -30,7 +30,7 @@ int main() {
     if(soma1>soma2){
         cout << "Jedi";
     }else if(soma2>soma1){
-        cout << "Stih";
+        cout << "Sith";
     }else{
         cout << "Empate";
     }

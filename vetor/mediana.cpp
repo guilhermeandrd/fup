@@ -4,8 +4,8 @@
 using namespace std;
 
 int main() {
-    int quant, i=0, passo=0, meio=0;
-    double mediana=0;
+    int quant, i=0, meio=0;
+    float mediana=0.0, v1=0.0, v2=0.0, passo=0.0;
 
     cin >> quant;
 
@@ -26,19 +26,16 @@ int main() {
     }
 
     if((quant%2)==0){
-        meio = (quant/2)-1;
-        mediana = (vetor[meio] + vetor[meio+1])/2.0;
+        meio = (quant/2);
+        v1 = vetor[meio];
+        v2 = vetor[meio+1];
+        mediana = (v1+v2)/2.0;
     }else{
-        meio = ((quant+1)/2)-1;
-        mediana = vetor[meio]/0.0;
+        meio = ((quant+1)/2);
+        mediana = vetor[meio];
     }
     
-    cout << setprecision(2) << fixed << mediana << "\n";
+    cout << setprecision(1) << fixed << mediana << "\n";
 
-    //dois casos
-        //se a quantidade de elementos for par
-            //pegar os dois elementos do meio, somar e dividir por 2
-        //se for impar
-            //dividir a quantidade por 2, somar mais 1, e ai tenho o indice da mediana
     return 0;
 }
