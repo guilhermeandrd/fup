@@ -3,7 +3,7 @@
 using namespace std;
 
 int main() {
-    int quant,i;
+    int quant,i, passo=0;
 
     cin >> quant;
 
@@ -19,13 +19,19 @@ int main() {
     }
 
     for(i=0;i<quant;i++){
-        cout << vetor2[i] << " ";
+        passo = vetor1[i];
+        vetor1[i] = vetor2[i];
+        vetor2[i] = passo;
+    }
+
+    for(i=0;i<quant;i++){
+        cout << vetor1[i] << " ";
     }
 
     cout << "\n";
 
     for(i=0;i<quant;i++){
-        cout << vetor1[i] << " ";
+        cout << vetor2[i] << " ";
     }
 
     return 0;
