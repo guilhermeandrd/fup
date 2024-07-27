@@ -12,6 +12,8 @@ int main() {
     for(i=0;i<quant1;i++){
         cin >> vetor[i];
     }
+
+    //pra ordenar
     for(int e=0;e<quant1;e++){
         for(i=0;i<quant1;i++){
             if(vetor[i]>vetor[i+1]){
