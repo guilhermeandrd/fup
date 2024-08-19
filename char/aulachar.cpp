@@ -8,13 +8,18 @@ char upperCase(char c){
     if(c >= 'a' && c <= 'z'){
         posicao = c - 'a';
         return 'A' + posicao;
+    }else{
+        printf("Não é uma letra minuscula!\n");
+        return c;
     }
-    
+
 }
 
 int main() {
-    char c='a';
+    char c=' ';
 
-    cout << c;
+    cin >> c;
+
+    cout << "Maiusculo" << upperCase(c);
     return 0;
 }
