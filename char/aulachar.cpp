@@ -20,6 +20,9 @@ int main() {
 
     cin >> c;
 
+    maiusculo = upperCase(c);
+    if(maiusculo >= 'A' && maiusculo <= 'Z') cout << "Maiusculo "
+
     cout << "Maiusculo" << upperCase(c);
     return 0;
 }
